@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+
+
+<style>
+
+path {
+  stroke-linejoin: round;
+}
+
+.land {
+  fill: #ddd;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+}
+
+.voronoi {
+  fill: none;
+  stroke: brown;
+  stroke-width: .5px;
+}
+
+.slider { 
+  font-size:10px;
+  width: 450px; 
+  margin: 20px 0px 2px 0px;
+}
+
+</style>
+
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+
+<span class="timeText"></span>
+<span><div class="slider" id="timeslices"></div></span>
+<div id = "map"></div>
+
+
+<script>
+
+var width = 960,
+    height = 500;
+
+var projection = d3.geo.albers();
+
+var path = d3.geo.path()
+    .projection(projection)
+    .pointRadius(1.5);
+
+var svg = d3.select("#map").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+queue()
+    .defer(d3.json, "us.json")
+    .defer(d3.tsv, "hurricanes.tsv")
+    .await(ready);
+
+function ready(error, us, airports) {
+  svg.append("path")
+      .datum(topojson.feature(us, us.objects.land))
+      .attr("class", "land")
+      .attr("d", path);
+
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr("class", "states")
+      .attr("d", path);
+	
+ svg.selectAll("circle")
+	.data(airports)
+	.enter()
+	.append("circle")
+	.attr("r", function(d) {return Math.sqrt(d.windspeed)})
+	.attr("opacity", 1)
+	.attr("transform", function(d) {return "translate(" + projection([d.lon,d.lat]) + ")";});
+	
+	
+	var slices = [
+	{group:1, displaytime: 'time 1'},
+	{group:2, displaytime: 'time 2'},
+	{group:3, displaytime: 'time 3'},
+	{group:4, displaytime: 'time 4'},
+	{group:5, displaytime: 'time 5'},
+	{group:6, displaytime: 'time 6'},
+	{group:7, displaytime: 'time 7'},
+	{group:8, displaytime: 'time 8'},
+	{group:9, displaytime: 'time 9'},
+	{group:10, displaytime: 'time 10'},
+	{group:11, displaytime: 'time 11'},
+	{group:12, displaytime: 'time 12'},
+	{group:13, displaytime: 'time 13'},
+	{group:14, displaytime: 'time 14'},
+	{group:15, displaytime: 'time 15'},
+	{group:16, displaytime: 'time 16'},
+	{group:17, displaytime: 'time 17'},
+	{group:18, displaytime: 'time 18'},
+	{group:19, displaytime: 'time 19'},
+	]
+	
+	function filterMap(id){
+		d3.selectAll('circle').attr('opacity', function(d) { return +d.period == slices[id].group ? 1 : .05 });
+		$('.timeText').text('' + slices[id].displaytime + ' ')
+	}
+	
+	
+	$("#timeslices").slider({
+	  min: 0, max: slices.length - 1, step: 1, value: 0,
+	  slide: function(event, ui) { 		
+	 	filterMap(ui.value);
+	  }
+	});
+	
+	
+	filterMap(0)
+	
+
+}
+
+</script>
