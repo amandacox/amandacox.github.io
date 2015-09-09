@@ -49,11 +49,14 @@ p {
 /*Flex items*/
 
 .list {
+    display : -webkit-flex;
+    -webkit-flex-wrap: wrap;     
     display: flex;
     flex-wrap: wrap;
 }
 
 .list-item {
+    display : -webkit-flex;
     display: flex;
     padding: 1em;
     width: 100%;
@@ -73,6 +76,7 @@ p {
 
 .list-content {
     background-color: #fff;
+    display : -webkit-flex;
     display: flex;
     flex-direction: column;
     padding: 1em;
@@ -80,7 +84,9 @@ p {
 }
 
 .list-content p {
-    flex: 1 0 auto;
+  -webkit-box-flex: 1 0 auto;
+  -moz-box-flex:  1 0 auto;
+  flex: 1 0 auto;
 }
 </style>
 
