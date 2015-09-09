@@ -1,0 +1,163 @@
+<head>
+<meta charset="UTF-8">
+</head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto; 
+  max-width: 60em;
+  line-height: 1.3;
+  color: rgb(51, 102, 153);
+  cursor: auto;
+  display: inline;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  height: auto;
+  line-height: 17.4px;
+  text-align: left;
+  text-decoration: none solid rgb(51, 102, 153);
+  text-decoration-color: rgb(51, 102, 153);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+
+
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #326891;
+}
+a:visited {
+  color: rgb(85, 26, 139);
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  margin: 0px;
+  padding: 3px 0px;
+}
+
+/*Flex items*/
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-item {
+    display: flex; 
+    padding: 0.5em;
+    width: 100%;
+}
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 25%;
+  }
+}
+.list-content {
+    background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+    width: 100%;
+}
+.list-content p {
+    flex: 1 0 auto;
+}
+
+</style>
+
+
+<ul class="list">
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">
+      <img src="img/inflation.png" alt="" />
+      <p>All of Inflation's Little Parts</p>
+      </a>
+    </div>
+  </li>
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/2014/07/02/upshot/an-even-more-nuanced-breakdown-of-the-supreme-court.html">
+      <img src="img/scotus.png" alt="" />
+      <p>An Even More Nuanced Breakdown of the Supreme Court</p>
+      </a>
+    </div>
+  </li>
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">
+      <img src="img/chetty.png" alt="" />
+      <p>The Best and Worst Places to Grow Up: How Your Area Compares</p>
+      </a>
+    </div>
+  </li>
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html">
+      <img src="img/yieldcurve.png" alt="" />
+      <p>A 3-D View of the Yield Curve</p>
+      </a>
+    </div>
+  </li>
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/projects/2013/china-art-fraud/">
+      <img src="img/chinaart.png" alt="" />
+      <p>Forging an Art Market in China</p>
+      </a>
+    </div>
+  </li>
+
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html">
+      <img src="img/youdrawit.png" alt="" />
+      <p>You Draw It: How Family Income
+Predicts Children’s College Chances</p>
+      </a>
+    </div>
+  </li>
+
+
+
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html">
+      <img src="img/timeuse.png" alt="" />
+      <p>How Different Groups Spend Their Day</p>
+      </a>
+    </div>
+  </li>
+
+   <li class="list-item">
+    <div class="list-content">
+      <a href="http://www.nytimes.com/interactive/2012/10/05/business/economy/one-report-diverging-perspectives.html?_r=0">
+      <img src="img/goggles.png" alt="" />
+      <p>One Report, Diverging Perspectives</p>
+      </a>
+    </div>
+  </li>
+</ul>
