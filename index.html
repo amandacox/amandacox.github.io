@@ -1,343 +1,307 @@
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 </head>
-
 <style>
 * {
-  box-sizing: border-box;
-}
-body {
-  margin: 0 auto; 
-  max-width: 60em;
-  line-height: 1.3;
-  display: inline;
-  font-family: Verdana, sans-serif;
-  font-size: 12px;
-  line-height: 17.4px;
-}
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-img {
-  width: 100%;
-}
-a {
-  text-decoration: none;
-  color: #326891;
-}
-a:visited {
-  color: rgb(85, 26, 139);
-}
-a:hover {
-  text-decoration: underline;
-}
-p {
-  margin: 0px;
-  padding: 3px 0px;
+    box-sizing: border-box;
 }
 
-/*Flex items*/
-.list {
-  display: flex;
-  flex-wrap: wrap;
+body {
+    margin: 0 auto;
+    max-width: 60em;
+    line-height: 1.3;
+    display: inline;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 17.4px;
 }
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #326891;
+}
+
+a:visited {
+    color: rgb(85, 26, 139);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 0px;
+    padding: 3px 0px;
+}
+
+
+/*Flex items*/
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .list-item {
-    display: flex; 
+    display: flex;
     padding: 1em;
     width: 100%;
 }
+
 @media all and (min-width: 40em) {
-  .list-item {
-    width: 50%;
-  }
+    .list-item {
+        width: 50%;
+    }
 }
+
 @media all and (min-width: 60em) {
-  .list-item {
-    width: 25%;
-  }
+    .list-item {
+        width: 25%;
+    }
 }
+
 .list-content {
     background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
     width: 100%;
 }
+
 .list-content p {
     flex: 1 0 auto;
 }
-
 </style>
 
-
+<body>
 <ul class="list">
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">
-      <img src="img/inflation.png" alt="" />
-      <p>All of Inflation's Little Parts</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/2014/07/02/upshot/an-even-more-nuanced-breakdown-of-the-supreme-court.html">
-      <img src="img/scotus.png" alt="" />
-      <p>An Even More Nuanced Breakdown of the Supreme Court</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">
-      <img src="img/chetty.png" alt="" />
-      <p>The Best and Worst Places to Grow Up: How Your Area Compares</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html">
-      <img src="img/yieldcurve.png" alt="" />
-      <p>A 3-D View of the Yield Curve</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/projects/2013/china-art-fraud/">
-      <img src="img/chinaart.png" alt="" />
-      <p>Forging an Art Market in China</p>
-      </a>
-    </div>
-  </li>
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html">
-      <img src="img/youdrawit.png" alt="" />
-      <p>You Draw It: How Family Income Predicts Children’s College Chances</p>
-      </a>
-    </div>
-  </li>
-
-
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html">
-      <img src="img/timeuse.png" alt="" />
-      <p>How Different Groups Spend Their Day</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2012/10/05/business/economy/one-report-diverging-perspectives.html?_r=0">
-      <img src="img/goggles.png" alt="" />
-      <p>One Report, Diverging Perspectives</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html">
-      <img src="img/precincts.png" alt="" />
-      <p>The Most Detailed Maps You’ll See From the Midterm Elections*</p>
-      </a>
-    </div>
-  </li>
-
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2010/02/26/sports/olympics/20100226-olysymphony.html">
-      <img src="img/olymusical.png" alt="" />
-      <p>Fractions of a Second: An Olympic Musical</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="img/big/oil.png">
-      <img src="img/oil.png" alt="" />
-      <p>Oil’s Roller Coaster Ride</p>
-      </a>
-    </div>
-  </li>
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html">
-      <img src="img/unemp.png" alt="" />
-      <p>The Jobless Rate for People Like You</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/imagepages/2008/02/24/business/24METRIC_GRAPHIC.html">
-      <img src="img/movies.png" alt="" />
-      <p>Ebb and Flow at the Box Office</p>
-      </a>
-    </div>
-  </li>
-
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html">
-      <img src="img/chetty1.png" alt="" />
-      <p>In Climbing Income Ladder, Location Matters</p>
-      </a>
-    </div>
-  </li>
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2012/08/07/sports/olympics/the-best-and-worst-countries-in-the-medal-count.html">
-      <img src="img/hasse.png" alt="" />
-      <p>The Best and Worst Countries in the Medal Count</p>
-      </a>
-    </div>
-  </li>
-
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html">
-      <img src="img/trailer.png" alt="" />
-      <p>Dissecting a Trailer: The Parts of the Film That Make the Cut</p>
-      </a>
-    </div>
-  </li>
-
-   <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/packages/html/newsgraphics/pages/hp/2008/2008-06-03-1800.html">
-      <img src="img/flyingboxes.png" alt="" />
-      <p>The 2008 Campaign: How Different Groups Voted</p>
-      </a>
-    </div>
-  </li>
-
-
-  <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/newsgraphics/2014/senate-model/
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">
+                <img src="img/inflation.png" alt="" />
+                <p>All of Inflation's Little Parts</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/2014/07/02/upshot/an-even-more-nuanced-breakdown-of-the-supreme-court.html">
+                <img src="img/scotus.png" alt="" />
+                <p>An Even More Nuanced Breakdown of the Supreme Court</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">
+                <img src="img/chetty.png" alt="" />
+                <p>The Best and Worst Places to Grow Up: How Your Area Compares</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html">
+                <img src="img/yieldcurve.png" alt="" />
+                <p>A 3-D View of the Yield Curve</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/projects/2013/china-art-fraud/">
+                <img src="img/chinaart.png" alt="" />
+                <p>Forging an Art Market in China</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html">
+                <img src="img/youdrawit.png" alt="" />
+                <p>You Draw It: How Family Income Predicts Children’s College Chances</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html">
+                <img src="img/timeuse.png" alt="" />
+                <p>How Different Groups Spend Their Day</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2012/10/05/business/economy/one-report-diverging-perspectives.html?_r=0">
+                <img src="img/goggles.png" alt="" />
+                <p>One Report, Diverging Perspectives</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2014/11/04/upshot/senate-maps.html">
+                <img src="img/precincts.png" alt="" />
+                <p>The Most Detailed Maps You’ll See From the Midterm Elections*</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2010/02/26/sports/olympics/20100226-olysymphony.html">
+                <img src="img/olymusical.png" alt="" />
+                <p>Fractions of a Second: An Olympic Musical</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="img/big/oil.png">
+                <img src="img/oil.png" alt="" />
+                <p>Oil’s Roller Coaster Ride</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html">
+                <img src="img/unemp.png" alt="" />
+                <p>The Jobless Rate for People Like You</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/imagepages/2008/02/24/business/24METRIC_GRAPHIC.html">
+                <img src="img/movies.png" alt="" />
+                <p>Ebb and Flow at the Box Office</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html">
+                <img src="img/chetty1.png" alt="" />
+                <p>In Climbing Income Ladder, Location Matters</p>
+            </a>
+        </div>
+    </li> 
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2012/08/07/sports/olympics/the-best-and-worst-countries-in-the-medal-count.html">
+                <img src="img/hasse.png" alt="" />
+                <p>The Best and Worst Countries in the Medal Count</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2013/02/19/movies/awardsseason/oscar-trailers.html">
+                <img src="img/trailer.png" alt="" />
+                <p>Dissecting a Trailer: The Parts of the Film That Make the Cut</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/packages/html/newsgraphics/pages/hp/2008/2008-06-03-1800.html">
+                <img src="img/flyingboxes.png" alt="" />
+                <p>The 2008 Campaign: How Different Groups Voted</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/newsgraphics/2014/senate-model/
 ">
-      <img src="img/senate.png" alt="" />
-      <p>Who Will Win The Senate?</p>
-      </a>
-    </div>
-  </li>
-
-  <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2010/02/02/us/politics/20100201-budget-porcupine-graphic.html">
-      <img src="img/porcupine.png" alt="" />
-      <p>Budget Forecasts, Compared With Reality</p>
-      </a>
-    </div>
-  </li>
-
-
-  <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html">
-      <img src="img/facebook.png" alt="" />
-      <p>The Facebook Offering: How It Compares</p>
-      </a>
-    </div>
-  </li>
-
-
-  <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2014/07/08/upshot/how-the-year-you-were-born-influences-your-politics.html">
-      <img src="img/birthyear.png" alt="" />
-      <p>How Birth Year Influences Political Views</p>
-      </a>
-    </div>
-  </li>
-
-
-  <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/imagepages/2007/03/17/nyregion/nyregionspecial2/20070318_TRAIN_GRAPHIC.html">
-      <img src="img/commute.png" alt="" />
-      <p>Travel Times on Commuter Rail</p>
-      </a>
-    </div>
-  </li>
-
-
- <li class="list-item">
-    <div class="list-content">
-      <a href="http://elections.nytimes.com/2014/senate-model">
-      <img src="img/livemodel.png" alt="" />
-      <p>Live Senate model</p>
-      </a>
-    </div>
-  </li>
-
-
-
- <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2015/04/16/upshot/marriage-penalty-couples-income.html">
-      <img src="img/marriagepenalty.png" alt="" />
-      <p>Tax Day: Are You Receiving a Marriage Penalty or Bonus?</p>
-      </a>
-    </div>
-  </li>
-
-
- <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/imagepages/2008/04/16/us/20080416_OBAMA_GRAPHIC.html">
-      <img src="img/tree.png" alt="" />
-      <p>Decision Tree: The Obama-Clinton Divide</p>
-      </a>
-    </div>
-  </li>
-
- <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2013/04/22/sports/boston-moment.html">
-      <img src="img/boston.png" alt="" />
-      <p>4:09:43</p>
-      </a>
-    </div>
-  </li>
-
- <li class="list-item">
-    <div class="list-content">
-      <a href="http://www.nytimes.com/interactive/2015/07/21/upshot/election-2015-the-first-gop-debate-and-the-role-of-chance.html">
-      <img src="img/debate.png" alt="" />
-      <p>The First G.O.P. Debate: Who’s In, Who’s Out and the Role of Chance</p>
-      </a>
-    </div>
-  </li>
-
-
-
+                <img src="img/senate.png" alt="" />
+                <p>Who Will Win The Senate?</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2010/02/02/us/politics/20100201-budget-porcupine-graphic.html">
+                <img src="img/porcupine.png" alt="" />
+                <p>Budget Forecasts, Compared With Reality</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html">
+                <img src="img/facebook.png" alt="" />
+                <p>The Facebook Offering: How It Compares</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2014/07/08/upshot/how-the-year-you-were-born-influences-your-politics.html">
+                <img src="img/birthyear.png" alt="" />
+                <p>How Birth Year Influences Political Views</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/imagepages/2007/03/17/nyregion/nyregionspecial2/20070318_TRAIN_GRAPHIC.html">
+                <img src="img/commute.png" alt="" />
+                <p>Travel Times on Commuter Rail</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://elections.nytimes.com/2014/senate-model">
+                <img src="img/livemodel.png" alt="" />
+                <p>Live Senate model</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2015/04/16/upshot/marriage-penalty-couples-income.html">
+                <img src="img/marriagepenalty.png" alt="" />
+                <p>Tax Day: Are You Receiving a Marriage Penalty or Bonus?</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/imagepages/2008/04/16/us/20080416_OBAMA_GRAPHIC.html">
+                <img src="img/tree.png" alt="" />
+                <p>Decision Tree: The Obama-Clinton Divide</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2013/04/22/sports/boston-moment.html">
+                <img src="img/boston.png" alt="" />
+                <p>4:09:43</p>
+            </a>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="http://www.nytimes.com/interactive/2015/07/21/upshot/election-2015-the-first-gop-debate-and-the-role-of-chance.html">
+                <img src="img/debate.png" alt="" />
+                <p>The First G.O.P. Debate: Who’s In, Who’s Out and the Role of Chance</p>
+            </a>
+        </div>
+    </li>
 </ul>
-
+</body>
