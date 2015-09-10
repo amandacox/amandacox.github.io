@@ -1,14 +1,18 @@
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <style>
 * {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
     box-sizing: border-box;
 }
 
-body {
+html {
+    max-width: 80em;
     margin: 0 auto;
-    max-width: 60em;
     line-height: 1.3;
     display: inline;
     font-family: Verdana, sans-serif;
@@ -62,13 +66,13 @@ p {
     width: 100%;
 }
 
-@media all and (min-width: 40em) {
+@media (min-width: 40em) {
     .list-item {
         width: 50%;
     }
 }
 
-@media all and (min-width: 60em) {
+@media (min-width: 60em) {
     .list-item {
         width: 25%;
     }
@@ -96,7 +100,7 @@ p {
         <div class="list-content">
             <a href="http://www.nytimes.com/interactive/2008/05/03/business/20080403_SPENDING_GRAPHIC.html">
                 <img src="img/inflation.png" alt="" />
-                <p>All of Inflation's Little Parts</p>
+                <p>All of Inflation’s Little Parts</p>
             </a>
         </div>
     </li>
@@ -230,8 +234,7 @@ p {
     </li>
     <li class="list-item">
         <div class="list-content">
-            <a href="http://www.nytimes.com/newsgraphics/2014/senate-model/
-">
+            <a href="http://www.nytimes.com/newsgraphics/2014/senate-model/">
                 <img src="img/senate.png" alt="" />
                 <p>Who Will Win The Senate?</p>
             </a>
@@ -309,5 +312,14 @@ p {
             </a>
         </div>
     </li>
+    <li class="list-item">
+        <div class="list-content">
+            <a href="img/big/returns.png">
+                <img src="img/returns.png" alt="" />
+                <p>In Investing, It’s When You Start And When You Finish</p>
+            </a>
+        </div>
+    </li>
+
 </ul>
 </body>
